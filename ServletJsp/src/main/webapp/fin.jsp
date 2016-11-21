@@ -6,22 +6,15 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Insert title here</title>
 	</head>
-	<body onload="calcular_edad()">
+	<body>
 		<table align="center">
 				<tr>
-					<td>Pais:</td>
-					<td><b><%= request.getParameter("pais") %></b></td>
-				</tr>
-				<tr>
-					<td>Idioma:</td>
-					<td><b><%= request.getParameter("idioma") %></b></td>
+					<td>Pais</td>
+					<td>Idioma</td>
+					<td>Eliminar</td>
 				</tr>
 				<tr>
 					<td>
-						<form method="post" action="hello2">
-							<input type="submit" value="Eliminar Idioma">
-							<input type="hidden" value="<%=request.getParameter("idioma")%>" name="idioma">
-						</form>
 					</td>
 				</tr>
 				 

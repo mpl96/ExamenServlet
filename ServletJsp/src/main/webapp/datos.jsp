@@ -7,31 +7,40 @@
 <title>Insert title here</title>
 </head>
 	<body>
-		<form action="hello" method="post" name="form1">
-			<h1 align="center">Servlet</h1>
+		<form action="hello" method="post">
 			<table align="center">
 				<tr>
 					<td>Nombre del pais</td>
-					<td><input type="text" name="pais" size="50"></td>
+					<td><input type="text" name="country" size="50"></td>
 				</tr>
-				<!-- 
+				
 				<tr>
 					<td>Idioma que se habla</td>
 					<td>
-						<select name="idiomas">
-							<option value="datos"></option>
+						<select name="language">
+							
 						</select>
 					</td>
 				</tr>
-				-->
+				
+				<tr>
+					<td>
+						<input type="submit">
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+		<form action="insert" method="post">
+			<table align="center">
 				<tr>
 					<td>Introducir idioma</td>
-					<td><input type="text" name="idioma" size="50"></td>
+					<td><input type="text" name="language" size="50"></td>
 				</tr>
-				 -
+				
 				<tr>
 					<td align="center">
-						<input type="submit">
+						<input type="submit" name="Insertar idioma">
 					</td>
 				</tr>
 				
