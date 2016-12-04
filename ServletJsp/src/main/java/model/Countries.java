@@ -1,7 +1,8 @@
+package model;
 
 public class Countries {
 	private String country;
-	private String Language;
+	private String language;
 
 	public String getCountry() {
 		return country;
@@ -12,11 +13,11 @@ public class Countries {
 	}
 
 	public String getLanguage() {
-		return Language;
+		return language;
 	}
 
 	public void setLanguage(String language) {
-		Language = language;
+		this.language = language;
 	}
 	
 	

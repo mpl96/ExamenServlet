@@ -9,25 +9,45 @@
         This is a simple web application with a source code organization
         based on the recommendations of the Application Developer's Guide.
     </description>
-
+    
     <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>Servlet</servlet-class>
+    	<servlet-name>ServletInsert</servlet-name>
+    	<servlet-class>Servlet.ServletInsert</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+    	<servlet-name>ServletInsert</servlet-name>
+    	<url-pattern>/hello</url-pattern>
+  	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletDelete</servlet-name>
+		<servlet-class>Servlet.ServletDelete</servlet-class>
+	 </servlet>
+	 
+	 <servlet-mapping>
+	   	<servlet-name>ServletDelete</servlet-name>
+	   	<url-pattern>/Delete</url-pattern>
+	 </servlet-mapping>
+	
+    <servlet>
+        <servlet-name>ServletList</servlet-name>
+        <servlet-class>Servlet.ServletList</servlet-class>
     </servlet>
     
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>hello</url-pattern>
+        <servlet-name>ServletList</servlet-name>
+        <url-pattern>/List</url-pattern>
     </servlet-mapping>
     
     <servlet>
-        <servlet-name>Eliminar</servlet-name>
-        <servlet-class>ServletEliminar</servlet-class>
+        <servlet-name>ServletConfirmation</servlet-name>
+        <servlet-class>Servlet.ServletConfirmation</servlet-class>
     </servlet>
-
+    
     <servlet-mapping>
-        <servlet-name>Eliminar</servlet-name>
-        <url-pattern>hello2</url-pattern>
+        <servlet-name>ServletConfirmation</servlet-name>
+        <url-pattern>/Confirmation</url-pattern>
     </servlet-mapping>
     
     <welcome-file-list>
