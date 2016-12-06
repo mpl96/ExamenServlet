@@ -17,7 +17,7 @@ public class ServletConfirmation extends HttpServlet {
 		String language = req.getParameter("idioma");
 		req.setAttribute("idioma",language);
 
-		req.getRequestDispatcher("mensaje.jsp").forward(req, resp);
+		req.getRequestDispatcher("message.jsp").forward(req, resp);
 	}
 	
 }

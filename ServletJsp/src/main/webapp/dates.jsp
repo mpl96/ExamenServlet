@@ -47,7 +47,7 @@
 		
 		<tr>
 			<td>
-				<input type="button" onclick="window.location.href='fin.jsp'"  value="List Countries">
+				<input type="button" onclick="window.location.href='end.jsp'"  value="List Countries">
 			</td>
 		</tr>
 	</table>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="5;url=Inicio.jsp" />
+<meta http-equiv="refresh" content="5;url=dates.jsp" />
 <title>Message</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 	</center>
 	
 	<form method="post" action="Delete">
-		<input type="hidden" value="${language}" name="user1">
+		<input type="hidden" value="${language}" name="dates">
 	</form>
 </body>
 </html>

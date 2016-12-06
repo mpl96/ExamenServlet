@@ -7,14 +7,16 @@ import repository.*;
 
 public class Services {
 	private Repository repository = new Repository();
+	private RepositoryCountries repositoryCountries = new RepositoryCountries();
+	private RepositoryLanguages repositoryLanguages = new RepositoryLanguages();
 	
 	public void insertNewLanguage(String nLanguage, String country) {
-		repository.insertTableLanguages(nLanguage);
-		repository.insertTableCountries(country, nLanguage);
+		repositoryLanguages.insertTableLanguages(nLanguage);
+		repositoryCountries.insertTableCountries(country, nLanguage);
 	}
 
 	public void insertCountry(String language, String country) {
-		repository.insertTableCountries(country, language);
+		repositoryCountries.insertTableCountries(country, language);
 	}
 	
 	public void DeleteLanguage(String language) {
@@ -22,11 +24,11 @@ public class Services {
 	}
 	
 	public List<Countries> listCountries() {
-		return repository.listCountries();
+		return repositoryCountries.listCountries();
 	}
 	
 	public List<Languages> listLanguages() {
-		return repository.listLanguages();
+		return repositoryLanguages.listLanguages();
 	}
 
 	public Repository getRepository() {

@@ -15,7 +15,7 @@
 <form method="post" action="List">	
 	<input type="submit"  value="List">
 	
-	<input type="button" onclick="window.location.href='datos.jsp'"  value="Comeback">
+	<input type="button" onclick="window.location.href='dates.jsp'"  value="Comeback">
 </form>	
 
 
@@ -29,11 +29,11 @@
 		</thead>
 		
 		<tbody>
-			<c:forEach var="user" items="${listAllCountries}">
+			<c:forEach var="dates" items="${listAllCountries}">
 				<tr>
-					<td><c:out value="${user.country}"/> </td>
-					<td><c:out value="${user.language}"/> </td>
-					<td><a name="user1" href="Confirmacion?language=${user1.language}">Delete Language</a></td>
+					<td><c:out value="${dates.country}"/> </td>
+					<td><c:out value="${dates.language}"/> </td>
+					<td><a  href="Confirmacion?language=${dates.language}">Delete Language</a></td>
 		    	</tr>
 			</c:forEach>
 		</tbody>
