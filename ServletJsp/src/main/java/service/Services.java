@@ -10,9 +10,9 @@ public class Services {
 	private RepositoryCountries repositoryCountries = new RepositoryCountries();
 	private RepositoryLanguages repositoryLanguages = new RepositoryLanguages();
 	
-	public void insertNewLanguage(String nLanguage, String country) {
-		repositoryLanguages.insertTableLanguages(nLanguage);
-		repositoryCountries.insertTableCountries(country, nLanguage);
+	public void insertNewLanguage(String newLanguage, String country) {
+		repositoryLanguages.insertTableLanguages(newLanguage);
+		repositoryCountries.insertTableCountries(country, newLanguage);
 	}
 
 	public void insertCountry(String language, String country) {

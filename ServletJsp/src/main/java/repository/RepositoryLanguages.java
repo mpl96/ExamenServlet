@@ -37,14 +37,12 @@ public class RepositoryLanguages {
 	
 	public  List<Languages> listLanguages(){
     	Connection conn = manager.open(jdbcUrl);
-    	List<Languages> listLanguages2 = new ArrayList<Languages>();
+    	List<Languages> listLanguages = new ArrayList<Languages>();
 		ResultSet resultSet = null;
 		PreparedStatement prepareStatement = null;
 		Statement stmt = null;
 
         try {
-            Class.forName("org.h2.Driver");
-		   
 		    stmt = conn.createStatement();
 			
 			prepareStatement = conn.prepareStatement("SELECT * FROM Idiomas");
@@ -53,7 +51,7 @@ public class RepositoryLanguages {
 				Languages datesInDatabase = new Languages();
 				datesInDatabase.setLanguages(resultSet.getString(1));
 				
-				listLanguages2.add(datesInDatabase);
+				listLanguages.add(datesInDatabase);
 			}
 
         } catch (SQLException se) {
@@ -65,7 +63,7 @@ public class RepositoryLanguages {
             closeCon(conn);
             closeRs(resultSet);
         } 
-        return listLanguages2;
+        return listLanguages;
    }
 	
 	private void closeRs(ResultSet resultSet) {
@@ -85,8 +83,6 @@ public class RepositoryLanguages {
 	       Statement stmt = null;
 
 	       try {
-	           Class.forName("org.h2.Driver");
-			 
 			   stmt = conn.createStatement();
 			
 			   String sql = "REPLACE INTO Idiomas (idioma) VALUES ('" + language + "')";

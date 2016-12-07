@@ -29,11 +29,11 @@
 		</thead>
 		
 		<tbody>
-			<c:forEach var="dates" items="${listAllCountries}">
+			<c:forEach var="languages" items="${listAllCountries}">
 				<tr>
-					<td><c:out value="${dates.country}"/> </td>
-					<td><c:out value="${dates.language}"/> </td>
-					<td><a  href="Confirmacion?language=${dates.language}">Delete Language</a></td>
+					<td><c:out value="${languages.country}"/> </td>
+					<td><c:out value="${languages.language}"/> </td>
+					<td><a  href="Confirmacion?language=${languages.language}">Delete Language</a></td>
 		    	</tr>
 			</c:forEach>
 		</tbody>

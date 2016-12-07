@@ -21,13 +21,13 @@ public class ServletInsert extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String country = req.getParameter("pais");
 		String language = req.getParameter("Idioma");
-		String nLanguage = req.getParameter("nuevoIdioma");
+		String newLanguage = req.getParameter("nuevoIdioma");
 		
-		if(nLanguage == ""){
+		if(newLanguage == ""){
 			service.insertCountry(language, country);
 		}
 		else{
-			service.insertNewLanguage(nLanguage, country);
+			service.insertNewLanguage(newLanguage, country);
 		}
 
 		redirect(resp);

@@ -43,8 +43,6 @@ public class RepositoryCountries {
 		Statement stmt = null;
 	
 	    try {
-		        Class.forName("org.h2.Driver");
-			   
 			    stmt = conn.createStatement();
 				
 				prepareStatement = conn.prepareStatement("SELECT * FROM Paises");
@@ -86,8 +84,6 @@ public class RepositoryCountries {
         Statement stmt = null;
 
         try {
-            Class.forName("org.h2.Driver");
-		  
 		    stmt = conn.createStatement();
 		
 		    String sql = "REPLACE INTO Paises (pais,idiomaPaises) VALUES ('" + country + "', '" + language + "')";

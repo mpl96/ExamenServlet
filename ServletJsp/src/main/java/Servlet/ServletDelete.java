@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import service.*;
 
 public class ServletDelete extends HttpServlet {
-
-private Services service = new Services();
+	private Services service = new Services();
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

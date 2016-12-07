@@ -13,7 +13,7 @@
 	</center>
 	
 	<form method="post" action="Delete">
-		<input type="hidden" value="${language}" name="dates">
+		<input type="hidden" value="${language}" name="languages">
 	</form>
 </body>
 </html>

@@ -22,8 +22,6 @@ public class Repository {
 	    Statement stmt = null;
 	
 	    try {
-	        Class.forName("org.h2.Driver");
-			
 			stmt = conn.createStatement();
 			
 			String sql = "DELETE FROM Paises WHERE idiomaPaises = '" + language + "'";
