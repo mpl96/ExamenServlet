@@ -12,7 +12,7 @@
     
     <servlet>
     	<servlet-name>ServletInsert</servlet-name>
-    	<servlet-class>Servlet.ServletInsert</servlet-class>
+    	<servlet-class>servlet.ServletInsert</servlet-class>
   	</servlet>
   	
   	<servlet-mapping>
@@ -22,7 +22,7 @@
 
 	<servlet>
 		<servlet-name>ServletDelete</servlet-name>
-		<servlet-class>Servlet.ServletDelete</servlet-class>
+		<servlet-class>servlet.ServletDelete</servlet-class>
 	 </servlet>
 	 
 	 <servlet-mapping>
@@ -32,7 +32,7 @@
 	
     <servlet>
         <servlet-name>ServletList</servlet-name>
-        <servlet-class>Servlet.ServletList</servlet-class>
+        <servlet-class>servlet.ServletList</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -42,7 +42,7 @@
     
     <servlet>
         <servlet-name>ServletConfirmation</servlet-name>
-        <servlet-class>Servlet.ServletConfirmation</servlet-class>
+        <servlet-class>servlet.ServletConfirmation</servlet-class>
     </servlet>
     
     <servlet-mapping>
