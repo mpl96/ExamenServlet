@@ -34,6 +34,6 @@ public class ServletInsert extends HttpServlet {
 	}
 	
 	private void redirect(HttpServletResponse resp) throws IOException {
-		resp.sendRedirect("dates.jsp");
+		resp.sendRedirect("index.jsp");
 	}
 }

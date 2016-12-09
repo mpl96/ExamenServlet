@@ -15,7 +15,7 @@
 <form method="post" action="List">	
 	<input type="submit"  value="List">
 	
-	<input type="button" onclick="window.location.href='dates.jsp'"  value="Comeback">
+	<input type="button" onclick="window.location.href='index.jsp'"  value="Comeback">
 </form>	
 
 
