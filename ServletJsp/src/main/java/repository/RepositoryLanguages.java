@@ -45,7 +45,7 @@ public class RepositoryLanguages {
         try {
 		    stmt = conn.createStatement();
 			
-			prepareStatement = conn.prepareStatement("SELECT * FROM Idiomas");
+			prepareStatement = conn.prepareStatement("SELECT * FROM Languages");
 			resultSet = prepareStatement.executeQuery();
 			while(resultSet.next()){
 				Languages datesInDatabase = new Languages();
@@ -54,14 +54,12 @@ public class RepositoryLanguages {
 				listLanguages.add(datesInDatabase);
 			}
 
-        } catch (SQLException se) {
-            se.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             closeStm(conn, stmt);
-            closeCon(conn);
             closeRs(resultSet);
+            closeCon(conn);
         } 
         return listLanguages;
    }
@@ -85,11 +83,9 @@ public class RepositoryLanguages {
 	       try {
 			   stmt = conn.createStatement();
 			
-			   String sql = "REPLACE INTO Idiomas (idioma) VALUES ('" + language + "')";
+			   String sql = "REPLACE INTO Languages (language) VALUES ('" + language + "')";
 	                  
 	           stmt.executeUpdate(sql);
-	       } catch (SQLException se) {            
-	           se.printStackTrace();
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	       } finally {

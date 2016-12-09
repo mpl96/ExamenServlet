@@ -15,8 +15,8 @@ public class ServletDelete extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String language = req.getParameter("dates");
-		req.setAttribute("idioma",language);
-		service.DeleteLanguage(language);
+		req.setAttribute("language",language);
+		service.deleteLanguage(language);
 		redirect(resp);
 	}
 

@@ -17,21 +17,19 @@ public class Repository {
 	private static final String jdbcUrl = "jdbc:h2:file:./src/main/resources/test";
 	ConnectionManager manager = new ConnectionH2();
 	
-	public void DeleteTable(String language){
+	public void deleteTable(String language){
 		Connection conn = manager.open(jdbcUrl);
 	    Statement stmt = null;
 	
 	    try {
 			stmt = conn.createStatement();
 			
-			String sql = "DELETE FROM Paises WHERE idiomaPaises = '" + language + "'";
-			String sql2 = "DELETE FROM Idiomas WHERE idioma = '" + language + "'";
+			String sql = "DELETE FROM Countries WHERE languageCountry = '" + language + "'";
+			String sql2 = "DELETE FROM Languages WHERE language = '" + language + "'";
 	
 	        stmt.executeUpdate(sql);
 	        stmt.executeUpdate(sql2);
 	
-	    } catch (SQLException se) {
-	        se.printStackTrace();
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    } finally {

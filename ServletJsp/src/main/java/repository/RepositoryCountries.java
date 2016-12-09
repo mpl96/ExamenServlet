@@ -45,7 +45,7 @@ public class RepositoryCountries {
 	    try {
 			    stmt = conn.createStatement();
 				
-				prepareStatement = conn.prepareStatement("SELECT * FROM Paises");
+				prepareStatement = conn.prepareStatement("SELECT * FROM Countries");
 				resultSet = prepareStatement.executeQuery();
 				while(resultSet.next()){
 					Countries datesInDatabase = new Countries();
@@ -55,14 +55,12 @@ public class RepositoryCountries {
 					listCountries2.add(datesInDatabase);
 				}
 	
-        } catch (SQLException se) {
-            se.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             closeStm(conn, stmt);
-            closeCon(conn);
             closeRs(resultSet);
+            closeCon(conn);
         } 
 	    return listCountries2;
 	}
@@ -86,11 +84,9 @@ public class RepositoryCountries {
         try {
 		    stmt = conn.createStatement();
 		
-		    String sql = "REPLACE INTO Paises (pais,idiomaPaises) VALUES ('" + country + "', '" + language + "')";
+		    String sql = "REPLACE INTO Countries (country,languageCountry) VALUES ('" + country + "', '" + language + "')";
                    
             stmt.executeUpdate(sql);
-        } catch (SQLException se) {            
-            se.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

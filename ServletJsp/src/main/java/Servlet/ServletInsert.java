@@ -19,9 +19,9 @@ public class ServletInsert extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String country = req.getParameter("pais");
-		String language = req.getParameter("Idioma");
-		String newLanguage = req.getParameter("nuevoIdioma");
+		String country = req.getParameter("country");
+		String language = req.getParameter("Language");
+		String newLanguage = req.getParameter("newLanguage");
 		
 		if(newLanguage == ""){
 			service.insertCountry(language, country);

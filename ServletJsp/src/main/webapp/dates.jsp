@@ -10,6 +10,12 @@
 <title>Home</title>
 </head>
 <body>
+<%
+Services service = new Services();
+List<Languages> listAllLanguages = service.listLanguages(); 
+pageContext.setAttribute("languages", listAllLanguages);
+%>
+
 <form method="post" action="hello">
 	<table width="40%" align="center">
 		<tr>
@@ -23,11 +29,11 @@
 			<td><p>Language</p></td>
 			<td><select name ="Language" id="Language">
 			  	<%  
-					Services service = new Services();
-					List<Languages> listAllLanguages = service.listLanguages(); 
-					for (int i=0;i<listAllLanguages.size();i++){
-					   out.println("<option value ='"+listAllLanguages.get(i).getLanguages()+"'>"+listAllLanguages.get(i).getLanguages()+"</option>");
-					}
+			  		if (null != listAllLanguages && !listAllLanguages.isEmpty()){
+				  		for (Languages language : listAllLanguages){
+						   out.println("<option value ='"+language.getLanguages()+"'>"+language.getLanguages()+"</option>");
+						}
+			  		}
 				%>
 			</select></td>
 		</tr>

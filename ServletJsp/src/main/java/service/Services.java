@@ -19,8 +19,8 @@ public class Services {
 		repositoryCountries.insertTableCountries(country, language);
 	}
 	
-	public void DeleteLanguage(String language) {
-		repository.DeleteTable(language);
+	public void deleteLanguage(String language) {
+		repository.deleteTable(language);
 	}
 	
 	public List<Countries> listCountries() {
