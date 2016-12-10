@@ -17,25 +17,7 @@ public class RepositoryCountries {
 	private static final String jdbcUrl = "jdbc:h2:file:./src/main/resources/test";
 	ConnectionManager manager = new ConnectionH2();
 	private Repository repository = new Repository();
-	/*
-	private void closeCon(Connection conn) {
-		try {
-		    if (conn!= null)
-		        conn.close();
-		} catch (SQLException se) {
-		    se.printStackTrace();
-		} 
-	}
 	
-	private void closeStm(Connection conn, Statement stmt) {
-		try {
-		    if (stmt!=null)
-		        conn.close();
-		} catch (SQLException se) {
-			se.printStackTrace();
-		} 
-	}
-	*/
 	public  List<Countries> listCountries(){
 		Connection conn = manager.open(jdbcUrl);
 		List<Countries> listCountries2= new ArrayList<Countries>();
@@ -65,19 +47,7 @@ public class RepositoryCountries {
         } 
 	    return listCountries2;
 	}
-	/*
-	private void closeRs(ResultSet resultSet) {
-		if(
-			resultSet != null){
-			try {
-				resultSet.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-				throw new RuntimeException(e);
-			}
-		}
-	}
-	*/
+	
 	public void insertTableCountries(String country, String language){
     	Connection conn = manager.open(jdbcUrl);
         Statement stmt = null;
