@@ -38,7 +38,7 @@ public class Repository {
 	    } 
 	} 
 	
-	private void closeCon(Connection conn) {
+	public void closeCon(Connection conn) {
 		try {
 		    if (conn!= null)
 		        conn.close();
@@ -47,13 +47,25 @@ public class Repository {
 		} 
 	}
 	
-	private void closeStm(Connection conn, Statement stmt) {
+	public void closeStm(Connection conn, Statement stmt) {
 		try {
 		    if (stmt!=null)
 		        conn.close();
 		} catch (SQLException se) {
 			se.printStackTrace();
 		} 
+	}
+	
+	public void closeRs(ResultSet resultSet) {
+		if(
+			resultSet != null){
+			try {
+				resultSet.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				throw new RuntimeException(e);
+			}
+		}
 	}
 
 	

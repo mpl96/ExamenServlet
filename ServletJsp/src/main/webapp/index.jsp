@@ -16,7 +16,7 @@ List<Languages> listAllLanguages = service.listLanguages();
 pageContext.setAttribute("languages", listAllLanguages);
 %>
 
-<form method="post" action="hello">
+<form method="post" action="index">
 	<table width="40%" align="center">
 		<tr>
 			<td><p>Country</p></td>

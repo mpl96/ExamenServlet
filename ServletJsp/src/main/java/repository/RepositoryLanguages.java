@@ -16,7 +16,8 @@ import model.*;
 public class RepositoryLanguages {
 	private static final String jdbcUrl = "jdbc:h2:file:./src/main/resources/test";
 	ConnectionManager manager = new ConnectionH2();
-	
+	private Repository repository = new Repository();
+	/*
 	private void closeCon(Connection conn) {
 		try {
 		    if (conn!= null)
@@ -34,7 +35,7 @@ public class RepositoryLanguages {
 			se.printStackTrace();
 		} 
 	}
-	
+	*/
 	public  List<Languages> listLanguages(){
     	Connection conn = manager.open(jdbcUrl);
     	List<Languages> listLanguages = new ArrayList<Languages>();
@@ -57,13 +58,13 @@ public class RepositoryLanguages {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            closeStm(conn, stmt);
-            closeRs(resultSet);
-            closeCon(conn);
+        	repository.closeStm(conn, stmt);
+            repository.closeRs(resultSet);
+            repository.closeCon(conn);
         } 
         return listLanguages;
    }
-	
+	/*
 	private void closeRs(ResultSet resultSet) {
 		if(
 			resultSet != null){
@@ -75,7 +76,7 @@ public class RepositoryLanguages {
 			}
 		}
 	}
-
+*/
 	public  void insertTableLanguages(String language){
 		   Connection conn = manager.open(jdbcUrl);
 	       Statement stmt = null;
@@ -89,8 +90,8 @@ public class RepositoryLanguages {
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	       } finally {
-	           closeStm(conn, stmt);
-	           closeCon(conn);
+	    	   repository.closeStm(conn, stmt);
+	    	   repository.closeCon(conn);
 	       } 
 	   }
 	

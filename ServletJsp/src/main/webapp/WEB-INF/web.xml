@@ -17,7 +17,7 @@
   	
   	<servlet-mapping>
     	<servlet-name>ServletInsert</servlet-name>
-    	<url-pattern>/hello</url-pattern>
+    	<url-pattern>/Insert</url-pattern>
   	</servlet-mapping>
 
 	<servlet>
